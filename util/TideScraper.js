@@ -2,7 +2,7 @@ const formatUrl = (location) => `https://www.tide-forecast.com/locations/${locat
 let cheerio = require("cheerio");
 let axios = require('axios');
 var TideEvent = require( '../data/TideEvent')
-class Builder {
+class TideScraper {
     
   constructor(){}
   get(location) {
@@ -15,9 +15,6 @@ class Builder {
           var table = $('.tide-events table' );
           var dates = $('.tide-events table td.date');
           var rowsInTable = $('.tide-events table tr');
-
-          console.log( "Rows in table " + rowsInTable.length);
-
           dates.each(function(index, element){
             var date = $(this).text();
             var nextDateTd = dates.eq(index + 1);
@@ -51,4 +48,4 @@ class Builder {
   }
 }
 
-module.exports = Builder;
+module.exports = TideScraper;
