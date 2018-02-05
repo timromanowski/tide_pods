@@ -1,0 +1,11 @@
+<h1>{{location.name}}</h1>
+<div>
+    Source Url : <a href="{{pod.sourceUrl}}">{{pod.sourceUrl}}</a>
+</div>
+<div>
+<ul>
+{{#each pod.tideData}}
+   <li>{{_date}} : {{_type}} : {{_time}} : {{_height}}</li>
+{{/each}}
+</ul>
+</div>

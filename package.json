@@ -1,0 +1,15 @@
+{
+  "name": "tide-pods",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "git@github.com:timromanowski/tide_pods.git",
+  "description": "Scrape Tide Data from some Site",
+  "main": "server.js",
+  "author": "Tim Romanowski",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "cheerio": "latest",
+    "express": "latest",
+    "express-handlebars": "^3.0.0"
+  }
+}
